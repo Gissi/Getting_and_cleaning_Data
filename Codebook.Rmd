@@ -5,9 +5,11 @@ date: "Saturday, March 21, 2015"
 output: html_document
 ---
 
-This is an R Markdown document explaining the variables and the data transformed in the course project for the Getting and Cleaning Data course of the data scientist track on coursera the r script itself can be found in repository as run_analysis.r 
+This is an R Markdown document explaining the variables and the data transformed in the course project for the "Getting and Cleaning Data"" course of the data scientist track on coursera the r script itself can be found in repository as run_analysis.r 
 
 The code itself is pretty well commented so it should be enough to read through it but here I will outline the basic steps i did 
+
+It could be better for the structure to knit HTML from this codebook.
 
 1. Downloaded all the data,create a folder to work in based on relative positions and setting it as a working directory. 
 2. Saveing all the data neccesary to finish the project.
