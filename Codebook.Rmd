@@ -5,17 +5,42 @@ date: "Saturday, March 21, 2015"
 output: html_document
 ---
 
-This is an R Markdown document explaining the variables and the data transformed in the course project for the Getting and Cleaning Data course of the data scientist track on coursera. 
+This is an R Markdown document explaining the variables and the data transformed in the course project for the Getting and Cleaning Data course of the data scientist track on coursera the r script itself can be found in repository as run_analysis.r 
+
+The code itself is pretty well commented so it should be enough to read through it but here I will outline the basic steps i did 
+
+1. Downloaded all the data,create a folder to work in based on relative positions and setting it as a working directory. 
+2. Saveing all the data neccesary to finish the project.
+* 2.1 First I download the activity labels and add a column names to the data first column = id second Acticity 
+* 2.2 Read the test data for the x variable
+* 2.3 Read the test data for the y variable
+* 2.4 Read the test data for the subject variable
+* 2.5 Adding names to the x test data based on the feature file.
+* 2.6 I create index from 1 to the length of the files to be sure I Cbind it correctly together -> columns names Index_x
+Index_y and Index_s
+* 2.7 Name the columns for for the y and subject files, for y -> Training_label, for subject -> subject_number
+* 2.8 Only selecting the mean and std variables from the x measurements using grep funciton. 
+* 2.9 Column binding the x,y and subject
+* 2.10 Checking to see the data.
+3. Now doing the same as in 2 with the training data set.
+4. Merging the test and the training data together 
+5. Fixing the column names for the x measure in the merged data set by removing () and more patterns with sub function. 
+6. Rearranging the data and view it with for example 
+* head(all_data_m[order(all_data_m$subject_number),1:7])
+* tail(all_data_m[order(all_data_m$subject_number),1:7])
+* head(all_data_m[order(all_data_m$source,all_data_m$Training_label,all_data_m$row_index),1:7])
+7. The columns are 
+* row_index -> the index created earlier on all of the rows.
+* training_label -> Traning labels numbering from the y measures
+* Activity -> training label string explaining the number from the activity label file 
+* subject_number -> the number of the subject that is measured
+* source -> string explaing where the data came from training vs test
+* Other columns are measurement values from the x measure files.
+8. Creating new tidy data set as requested in project.
+9. installing library needed for using ddply function
+10. Tidy data ready as the variable tidy_data columns are
+* Activity -> training label string explaining the activity
+* subject_number -> the number of the subject that is measured
+* rest of the columns are mean of the measurement based on activity and subject.
 
 
-```{r}
-summary(cars)
-```
-
-You can also embed plots, for example:
-
-```{r, echo=FALSE}
-plot(cars)
-```
-
-Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
