@@ -1,4 +1,4 @@
-#Retrieve data for project and define workin directory.
+#Retrieve data for project and define working directory.
 
 #Start removing all variables
 rm(list=ls())
