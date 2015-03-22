@@ -1,0 +1,21 @@
+---
+title: "CodeBook"
+author: "Gissur Jónasson"
+date: "Saturday, March 21, 2015"
+output: html_document
+---
+
+This is an R Markdown document explaining the variables and the data transformed in the course project for the Getting and Cleaning Data course of the data scientist track on coursera. 
+
+
+```{r}
+summary(cars)
+```
+
+You can also embed plots, for example:
+
+```{r, echo=FALSE}
+plot(cars)
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
