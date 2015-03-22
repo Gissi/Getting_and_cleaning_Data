@@ -1,0 +1,16 @@
+---
+title: "README"
+author: "Gissur Jónasson"
+date: "Sunday, March 22, 2015"
+output: html_document
+---
+
+The course prjoect repository includes the following files 
+
+===========================================================================
+
+1. run_analysis.r - In this file all the data is downloaded. It is then unzipped and transformed according to prjoject description. In the end it has the final version of the tidy data set that was returned according to course project. 
+
+2. Codebook.rmd - This is a markdown file explaining all the code in run_analysis.r in more detail. Here the variables are explained and all the trasnformation made to the code. 
+
+3. README.rmd - A short text file outlining the files in the repository.
